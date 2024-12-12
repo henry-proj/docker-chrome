@@ -26,6 +26,7 @@ jobs:
       - name: Extract version tag
         id: get-version
         run: echo "VERSION=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
+        shell: bash
 
       - name: Build and push Docker images
         run: |
